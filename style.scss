@@ -7,10 +7,7 @@
 
 @import "_reset";
 @import "_jekyll_base";
-@import " _trevethan.scss";
 @import "_index";
-@import "_map";
-@import "_seaview";
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
