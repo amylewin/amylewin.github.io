@@ -1,93 +1,252 @@
 @import "_variables";
 @import "_mixins";
 
-.blurb {
-  clear: both;
-  padding: 6px 20px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  background-color: $cream;
-  font-size: 1.1rem;
-  font-family: $arimo-font;
-  color: $brown;
-  line-height: 1.5;
-}
 
-.divider {
+body,html,div,section,ul,li,p,img,h1,h2,h3,h4,h5,h6{margin: 0px; padding: 0px; vertical-align: top; text-align: center; float: none; position: relative;}
+a{text-decoration: none; color: black;}
+body,html{font-size: 20px; font-family: sans-serif; width:100%; height: 100%;}
+li{display: inline; list-style-type: none;}
+header,section {width:100%;}
+
+/*CSS for site*/
+
+body{
+  // background: url('/images/forest.jpg') repeat scroll 0% 0% / 150px 150px #FFF;
+}
+.half{
   width: 100%;
-  border-bottom: 2px dashed $trevethan-drk-blue;
-  margin-bottom: 15px;
+  height: 50%;
+  z-index: -1;
+  background: url('/images/forest.JPG') 250% 50% / 600px 300px #FFF;
+  position: absolute;
+  top:0;
+  left: 0;
 }
-
-.home-photo-holder {
+.side{
+  position: absolute;
+  width: 370px;
+  top: 25%;
   display: inline-block;
-  width: 40%;
-  margin-bottom: 15px;
-  @include respond-to-max($med) {
-    width: 100%;
-  }
+  background-color: white;
+  padding: 2vh 1vw 2vh 1vw;
+  border-radius: 20px;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
-
-.home-photo {
+.social{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 1vw;
+padding-bottom: 1.5vh;
+  width: 300px;
+  text-align: center;
+}
+.social  div {
+  border-top: 1px solid #f2f2f2;
+  padding-top: 5px;
+}
+.social  ul{
+  padding: 2vh 0 0 0;
+  margin: 0;
+  display: inline;
+}
+.social  ul > li{
+  margin: 0 5px 0 5px;
+}
+.social  h2 {
+  display: inline;
+  font-family: 'Oswald';
+  font-weight: 300;
+  margin-right: 5px;
+  border-left: 1px solid #f2f2f2;
+  padding-left: 10px;
+}
+.title{
+  padding: 2vh 2vw 2vh 2vw;
+  font-family: 'Arimo';
+  color: black;
+  letter-spacing: 2px;
+  font-size: 20%;
+  background-color: white;
+  border-radius: 20px;
+}
+.header{
+  background-size: 100%;
+  background-position: center center;
+  color: white;
+  height: 10vh;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 0;
+  text-align: center;
+  font-family: 'Oswald';
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  padding: 26vh 0 2vh 0;
   width: 100%;
-  height: auto;
 }
-
-.caravan {
-  width: 50%;
-  margin-top: 10px;
-  display: inline-block;
-  vertical-align: top;
-  padding: 10px;
-  color: $trevethan-drk-blue;
-  line-height: 30px;
-  letter-spacing: 1px;
-  margin-left: 5%;
-  font-size: 1.2rem;
-  @include respond-to-max($lrg) {
-    margin-top: -5px;
-    padding-top: 0;
-  }
-  @include respond-to-max($med) {
-    width: 100%;
-    margin: 10px 0 0 0;
-  }
+.container{
+  margin-top: 7vh;
+  width: 100%;
+  border-radius: 15px;
+  text-align: center;
+  padding: 0;
 }
-
-.caravan p {
-  @include respond-to-max($lrg) {
-    margin-top: 0;
-  }
+p{
+  color: white;
+  font-size: .9rem;
+  text-align: center;
+  padding-top: 2vh;
+  font-family: 'Roboto';
+  margin: .4vh 1vw 1vh 1vw;
 }
-
-.attraction-container {
-  padding: 20px;
-  background-color: $light-blue;
-  margin-top: 20px;
+button{
+  margin: 4vh auto 6vh auto;
+  padding: 2vh 0vw 2vh 0vw;
+  border-radius: 5px;
+  font-size: .8rem;
+  width: 300px;
 }
-
-#attractions {
-  width: 58%;
-  display: inline-block;
-  color: $darkGray;
-  @include respond-to-max($med) {
-    width: 100%;
-  }
-}
-
-.attractions p {
-  margin: 10px;
-}
-
-.bay-photo {
-  width: 40%;
-  height: auto;
-  display: inline-block;
+.uncentraliser{
   float: right;
-  @include respond-to-max($med) {
+  height: 100%;
+  width: 50%;
+}
+.credits{
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 3vw;
+  padding-bottom: 1.5vh;
+  width: 300px;
+  text-align: center;
+}
+.credits > p{
+  padding: 7px 0px 7px 0px;
+  margin: 0;
+  color: black;
+  font-size: .5rem;
+  font-family: 'Arimo';
+  border-bottom: 1px solid #f2f2f2;
+}
+a{
+  text-decoration: none;
+  color: #8C123D;
+  font-weight: bold;
+}
+
+
+
+/*Left had Portfolio side*/
+
+.left{
+  border-bottom-right-radius: 2px;
+  right: 53vw;
+  z-index: 2;
+}
+.left > .container{
+  display: inline-block;
+  background-color: #122d53;
+  border-bottom-right-radius: 2px;
+}
+.left > .header{
+  background: url('/images/headercompressed.jpg');
+}
+
+
+/*Right hand Blog side*/
+
+.right{
+  float: right;
+  border-bottom-left-radius: 2px;
+  left: 53vw;
+  z-index: 3;
+}
+.right > .container{
+  background-color: #3eb5c9;
+  border-bottom-left-radius: 2px;
+}
+.right > .header{
+  background: url('/images/headercompressed.jpg')
+}
+
+
+@media only screen and (max-height: 380px) and (min-width: 680px) {
+  .side {
+    top: 20%;
+  }
+  button {
+    margin: 0vh 0 5vh 0;
+  }
+  .header {
+    padding: 4vh 0 10vh 0;
+  }
+  p {
+    padding: 4vh 0 4vh 0;
+  }
+}
+
+@media only screen and (max-width: 979px) {
+  body{
+    font-size: 18px;
+  }
+  .side {
+    width: 300px;
+  }
+  button {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 679px) {
+  .half{
     width: 100%;
-    float: none;
-    margin-top: 10px;
+    height: 330px;
+    border-bottom: 2px solid #eed003;
+    border-right: none;
+  }
+  .side {
+    width: 370px;
+    position: relative;
+    margin: 60px auto 0 auto;
     display: block;
+    left: initial;
+    right: initial;
+    float: none;
+    padding: 15px 2vw 5px 2vw;
+    height: 220px;
+  }
+  .right {
+    margin-top: 60px;
+  }
+  button {
+    width: 300px;
+    margin: 20px auto 20px auto;
+    padding: 10px 0vw 10px 0vw;
+  }
+  .title{
+    padding: 15px 2vw 15px 2vw;
+  }
+  .header{
+    height: 20px;
+    padding: 5px 0 30px 0;
+  }
+  .container{
+    margin-top: 10px;
+  }
+  p{
+    padding-top: 10px;
+    margin: 2px 1.4vw 5px 1.4vw;
+  }
+  .credits {
+    position: relative;
+    margin-top: 20px;
   }
 }

@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="utf-8"/>
-    <link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <link rel="icon" type="image/png" href="images/trevfav2.png">
+    <link rel="icon" type="image/png" href="/images/afav.png">
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }} | {{ site.description }}</title>
 
     <meta name="author" content="{{ site.name }}" />
     <meta name="description" content="{{ site.description }}">
@@ -22,60 +23,18 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <script src="{{ site.baseurl }}/instant.js"></script>
+    <script type="text/javascript">
+      window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+      window.analytics.load("yk2drqb085");
+      window.analytics.page();
+  </script>
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="wrapper">
 
-      <div class="banner">
-        <h1>Trevethan Holiday Caravan</h1>
-        <div class="menubutton button1">
-          <p>--</p><p>--</P><p>--</p>
-        </div>
+    {{ content }}
 
-        <ul class="contact">
-          <li>Contact us:
-            <span>
-              <a style="color: #6f6f53" href="mailto:sue@trevethanholidaycaravan.co.uk">  sue@trevethanholidaycaravan.co.uk</a>
-            </span>
-          </li>
-          <li>
-            <span>+44 (0)1841 520885</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="menu full-width {% if page.category == 'index' %} gallery-shown {% endif %}">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="seaview.html">Seaview Caravan</a></li>
-          <li id="menugallery"><a href="seaview.html#gallery">Gallery</a></li>
-          <li id="menupricelist"><a href="seaview.html#pricelist">Price list</a></li>
-          <li id="menuattractions"><a href="index.html#attractions">Local Attractions</a></li>
-          <li><a href="map.html">Directions<span> & Map</span></a></li>
-        </ul>
-
-        {% if page.category == "index" %}
-          <div class='sliding-gallery'>
-            <img id="pic1" src='images/img1comp.jpg'>
-            <img src='images/img2comp.jpg'>
-            <img src='images/img3comp.jpg'>
-            <img src='images/img4comp.jpg'>
-          </div>
-        {% endif %}
-
-      </div>
-
-        {{ content }}
-
-      <div class="footer full-width">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="seaview.html">Seaview Caravan</a></li>
-          <li><a href="mao.html">Directions</a></li>
-      </div>
-    </div>
     {% include analytics.html %}
   </body>
 </html>
